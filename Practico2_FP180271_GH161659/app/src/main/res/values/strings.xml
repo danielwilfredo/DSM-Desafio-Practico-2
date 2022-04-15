@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Danielo\'s Restaurant</string>
+    <string name="splashTitle">Danielo\'s\nRestaurant</string>
+    <string name="loadingText">cargando</string>
+    <string name="menuTitle">O p c i o n e s</string>
+    <string name="Opc1">Platillos y Bebidas</string>
+    <string name="Opc2">Realizar Pedido</string>
+    <string name="Opc3">Historial de Pedidos</string>
+    <string name="platillosTitle">Platillos y Bebidas</string>
+    <string name="lbPlatosItem1">Nombre:</string>
+    <string name="lbPlatosItem2">Detalle:</string>
+    <string name="lbPlatosItem3">Precio:</string>
+    <string name="lbCheckBox">Añadir al Pedido</string>
+    <string name="floatingButtonText">Pedido</string>
+    <string name="pedidoTitle">Confirmar Pedido</string>
+    <string name="lbTelefono">Ingrese su número de Teléfono</string>
+    <string name="lbNombreCliente">Ingrese su Nombre y Apellido</string>
+    <string name="lbCantidad">Ingrese cantidad</string>
+    <string name="btnConfirmar">Confirmar Pedido</string>
+
+
+</resources>
