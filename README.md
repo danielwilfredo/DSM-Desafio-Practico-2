@@ -1,8 +1,12 @@
 # Desarrollo de Software Para Moviles
-## Universidad Don Bosco
 ### Desafio Practico 2
-### Autores ✒️
+### Integrantes ✒️
 
 * **Daniela María Flores Pérez           FP180271** 
 * **Daniel Wilfredo Granados Hernández   GH161659** 
+
+## Enlace a Mockups
+https://www.figma.com/file/oimPCCFXLz2TTkVN5GpJFj/DSM-Practico2?node-id=0%3A1
+
+### Nombre Aplicación: Danielo's Restaurant
 
