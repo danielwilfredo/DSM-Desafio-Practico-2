@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,18 +18,12 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class ConfirmarPedido extends AppCompatActivity {
 
@@ -45,7 +38,6 @@ public class ConfirmarPedido extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_pedido);
-        menuRef = db.collection("menu");
         ArrayList<PlatosModel> pedidos =(ArrayList<PlatosModel>)getIntent().getSerializableExtra("Pedidos");
         loadDatainListview(pedidos);
         Log.d("tag",Double.toString(Total));
@@ -60,7 +52,7 @@ public class ConfirmarPedido extends AppCompatActivity {
 
     private void loadDatainListview(ArrayList<PlatosModel> pedidos) {
 
-        lvPlatos = findViewById(R.id.lvPedidosConfirm);
+        lvPlatos = findViewById(R.id.lvHistorial);
         PedidosListViewAdapter adapter = new PedidosListViewAdapter(ConfirmarPedido.this, pedidos);
         lvPlatos.setAdapter(adapter);
 
@@ -98,7 +90,7 @@ public class ConfirmarPedido extends AppCompatActivity {
             alert.setTitle("¿Desea confirmar su pedido?");
             alert.setMessage("Su total sera de $ "+form.format(Total));
 
-            alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            alert.setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
                     GuardarPedido();
                 }
@@ -125,27 +117,36 @@ public class ConfirmarPedido extends AppCompatActivity {
         TextView name = findViewById(R.id.txtNombreCompleto);
         TextView tel = findViewById(R.id.txtTelefono);
         LocalDate todaysDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String formattedLocalDate = todaysDate.format(formatter);
         ArrayAdapter<PlatosModel> datosActuales = (ArrayAdapter<PlatosModel>)lvPlatos.getAdapter();
+        ArrayList<PedidoModel> platos = new ArrayList<PedidoModel>();
         IdFactura="";
+        for (int i=0; i<datosActuales.getCount();i++)
+        {
+            PedidoModel pedido = new PedidoModel(
+                    datosActuales.getItem(i).getNombrePlato(),
+                    datosActuales.getItem(i).getCantidad(),
+                    datosActuales.getItem(i).getPrecioPlato()
+            );
+            //db.collection("pedidos").add(pedido);
+            platos.add(pedido);
+        }
         FacturaModel factura = new FacturaModel(
                 name.getText().toString(),
                 tel.getText().toString(),
-                todaysDate.toString(),
-                Total);
+                formattedLocalDate,
+                Total,
+                platos);
         db.collection("factura").add(factura).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 IdFactura = documentReference.getId();
-                for (int i=0; i<datosActuales.getCount();i++)
-                {
-                    PedidoModel pedido = new PedidoModel(
-                            datosActuales.getItem(i).getDocumentID(),
-                            IdFactura,
-                            datosActuales.getItem(i).getCantidad()
-                            );
-                    db.collection("pedidos").add(pedido);
-                }
                 Toast.makeText(ConfirmarPedido.this, "Confirmación de Pedido Exitosa", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(ConfirmarPedido.this, Factura.class);
+                in.putExtra("IdFactura", IdFactura);
+                startActivity(in);
+                finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

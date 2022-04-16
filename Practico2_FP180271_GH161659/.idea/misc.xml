@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/drawable/cardstyles.xml" value="0.1" />
         <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/drawable/rounded_corner.xml" value="0.136" />
-        <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/activity_confirmar_pedido.xml" value="0.1" />
+        <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/activity_confirmar_pedido.xml" value="0.264" />
+        <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/activity_factura.xml" value="0.4342105263157895" />
+        <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/activity_historiales.xml" value="0.14408602150537633" />
         <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/activity_menu_principal.xml" value="0.264" />
         <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/activity_platillos_ybebidas.xml" value="0.176" />
+        <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/historial_item.xml" value="0.536" />
         <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/pedido_item.xml" value="0.6061776061776062" />
         <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/layout/plato_item.xml" value="0.4" />
         <entry key="..\:/DSM/P2/DSM-Desafio-Practico-2/Practico2_FP180271_GH161659/app/src/main/res/mipmap-anydpi-v26/ic_logoprincipal.xml" value="0.1645" />

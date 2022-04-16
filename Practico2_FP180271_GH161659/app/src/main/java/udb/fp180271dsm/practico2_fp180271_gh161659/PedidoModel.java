@@ -2,16 +2,16 @@ package udb.fp180271dsm.practico2_fp180271_gh161659;
 
 public class PedidoModel {
 
-    private String IdPlato;
-    private String IdFactura;
+    private String NombrePlato;
     private int Cantidad;
+    private double Precio;
 
-    public String getIdFactura() {
-        return IdFactura;
+    public double getPrecio() {
+        return Precio;
     }
 
-    public void setIdFactura(String idFactura) {
-        IdFactura = idFactura;
+    public void setPrecio(double precio) {
+        Precio = precio;
     }
 
     public PedidoModel()
@@ -19,19 +19,19 @@ public class PedidoModel {
 
     }
 
-    public PedidoModel(String IdPlato, String IdFactura, int Cantidad)
+    public PedidoModel(String NombrePlato, int Cantidad, double precio)
     {
         this.Cantidad=Cantidad;
-        this.IdFactura=IdFactura;
-        this.IdPlato=IdPlato;
+        this.NombrePlato=NombrePlato;
+        this.Precio = precio;
     }
 
-    public String getIdPlato() {
-        return IdPlato;
+    public String getNombrePlato() {
+        return NombrePlato;
     }
 
-    public void setIdPlato(String idPlato) {
-        IdPlato = idPlato;
+    public void setNombrePlato(String nombrePlato) {
+        NombrePlato = nombrePlato;
     }
 
     public int getCantidad() {

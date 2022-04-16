@@ -5,15 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.SparseBooleanArray;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -22,9 +17,9 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,13 +80,13 @@ public class PlatillosYBebidas extends AppCompatActivity {
 
     private void setUpRecyclerView()
     {
-        lvPlatos = findViewById(R.id.lvPedidosConfirm);
+        lvPlatos = findViewById(R.id.lvHistorial);
         dataModalArrayList = new ArrayList<>();
         loadDatainListview();
     }
 
     private void loadDatainListview() {
-        db.collection("menu").orderBy("nombrePlato").get()
+        db.collection("menu").orderBy("detallePlato", Query.Direction.DESCENDING).get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {

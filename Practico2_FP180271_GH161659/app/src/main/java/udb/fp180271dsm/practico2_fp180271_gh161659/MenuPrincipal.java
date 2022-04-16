@@ -22,4 +22,10 @@ public class MenuPrincipal extends AppCompatActivity {
         Intent intent = new Intent(this, PlatillosYBebidas.class);
         startActivity(intent);
     }
+
+    public void AbrirHistorial(View v)
+    {
+        Intent intent = new Intent(this, Historiales.class);
+        startActivity(intent);
+    }
 }

@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Practico2_FP180271_GH161659">
         <activity
+            android:name=".Historiales"
+            android:exported="false" />
+        <activity
+            android:name=".Factura"
+            android:exported="false" />
+        <activity
             android:name=".ConfirmarPedido"
             android:exported="false" />
         <activity

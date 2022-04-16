@@ -19,5 +19,14 @@
     <string name="btnConfirmar">Confirmar Pedido</string>
     <string name="x">x</string>
     <string name="total">CALCULAR TOTAL</string>
-
+    <string name="facturaTitle">FACTURA</string>
+    <string name="lbOrden">Orden:</string>
+    <string name="lbCliente">Cliente:</string>
+    <string name="lbTelefonoC">Teléfono:</string>
+    <string name="lbFecha">Fecha del pedido:</string>
+    <string name="lbResumen">Resumen de compra:</string>
+    <string name="lbTotalC">Total:</string>
+    <string name="btnVolver">Volver al Menú</string>
+    <string name="historialTitle">Historial de Pedidos</string>
+    <string name="historialbtn">Buscar Historial</string>
 </resources>
