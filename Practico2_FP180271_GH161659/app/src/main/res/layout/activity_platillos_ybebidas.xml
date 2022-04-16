@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="@string/floatingButtonText"
-        android:textColor="@color/icons"
-        app:backgroundTint="@color/primary"
+        android:textColor="@color/primary"
+        app:backgroundTint="@color/BoneWhite"
         app:icon="@drawable/ic_baseline_arrow_forward_24"
-        app:iconTint="@color/icons"
+        app:iconTint="@color/primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
@@ -52,19 +52,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/lvPlatos"
-        android:layout_width="363dp"
-        android:layout_height="608dp"
+        android:id="@+id/lvPedidosConfirm"
+        android:layout_width="352dp"
+        android:layout_height="506dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="60dp"
         android:background="@color/primary_dark"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:scrollbars="none">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
 
     </ListView>

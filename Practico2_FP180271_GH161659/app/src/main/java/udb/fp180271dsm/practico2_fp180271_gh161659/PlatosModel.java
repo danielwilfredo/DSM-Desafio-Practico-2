@@ -1,18 +1,22 @@
 package udb.fp180271dsm.practico2_fp180271_gh161659;
 
-public class PlatosModel {
+import java.io.Serializable;
 
-    private PlatosModel()
+public class PlatosModel implements Serializable {
+
+    public PlatosModel()
     {
         //empty contructor needed
     }
 
-    private PlatosModel(String nombrePlato,int precioPlato, String detallePlato, boolean añadidoAlPedido)
+    public PlatosModel(String nombrePlato,int precioPlato, String detallePlato, boolean añadidoAlPedido,int cantidad,String documentID)
     {
         this.nombrePlato=nombrePlato;
         this.precioPlato=precioPlato;
         this.detallePlato=detallePlato;
         this.añadidoAlPedido=añadidoAlPedido;
+        this.cantidad=cantidad;
+        this.documentID = documentID;
     }
 
     public String getNombrePlato() {
@@ -35,15 +39,16 @@ public class PlatosModel {
 
     private String nombrePlato;
 
-    public int getPrecioPlato() {
+
+    public double getPrecioPlato() {
         return precioPlato;
     }
 
-    public void setPrecioPlato(int precioPlato) {
+    public void setPrecioPlato(double precioPlato) {
         this.precioPlato = precioPlato;
     }
 
-    private int precioPlato;
+    private double precioPlato;
     private String detallePlato;
 
     public boolean isAñadidoAlPedido() {
@@ -66,15 +71,16 @@ public class PlatosModel {
         this.cantidad = cantidad;
     }
 
-    public String getIdPlato() {
-        return idPlato;
+
+    public String getDocumentID() {
+        return documentID;
     }
 
-    public void setIdPlato(String idPlato) {
-        this.idPlato = idPlato;
+    public void setDocumentID(String documentID) {
+        this.documentID = documentID;
     }
 
-    private String idPlato;
+    private String documentID;
 
 
 

@@ -15,8 +15,9 @@
     <string name="pedidoTitle">Confirmar Pedido</string>
     <string name="lbTelefono">Ingrese su número de Teléfono</string>
     <string name="lbNombreCliente">Ingrese su Nombre y Apellido</string>
-    <string name="lbCantidad">Ingrese cantidad</string>
+    <string name="lbCantidad">Cantidad</string>
     <string name="btnConfirmar">Confirmar Pedido</string>
-
+    <string name="x">x</string>
+    <string name="total">CALCULAR TOTAL</string>
 
 </resources>

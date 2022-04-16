@@ -17,12 +17,25 @@
         android:paddingBottom="16dp">
 
         <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="6dp"
+            android:text="@string/x"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/txtCantidadPedido"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
             android:text="@string/lbCantidad"
+            android:textAllCaps="true"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -34,57 +47,31 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/txtCantidadPedido"
-            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtPrecioPedido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="23dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toStartOf="@+id/txtCantidadPedido"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNombrePedido" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/lbPlatosItem1"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/lbPlatosItem3"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <EditText
             android:id="@+id/txtCantidadPedido"
             android:layout_width="58dp"
             android:layout_height="39dp"
             android:layout_marginEnd="36dp"
+            android:backgroundTint="@color/black"
             android:ems="10"
             android:hint="0"
             android:inputType="number"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textColorHint="@color/secondary_text"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"

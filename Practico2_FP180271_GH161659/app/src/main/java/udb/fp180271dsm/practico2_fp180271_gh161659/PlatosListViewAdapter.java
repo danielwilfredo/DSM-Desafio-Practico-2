@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class PlatosListViewAdapter extends ArrayAdapter<PlatosModel> {
@@ -42,9 +43,12 @@ public class PlatosListViewAdapter extends ArrayAdapter<PlatosModel> {
         TextView txtdetalle = listitemView.findViewById(R.id.txtDetalle);
         TextView txtprecio= listitemView.findViewById(R.id.txtPrecioPedido);
         CheckBox cbAñadir = listitemView.findViewById(R.id.cbAñadir);
+        TextView id = listitemView.findViewById(R.id.txtId);
         txtnombre.setText(dataModal.getNombrePlato());
         txtdetalle.setText(dataModal.getDetallePlato());
-        txtprecio.setText("$ "+Integer.toString(dataModal.getPrecioPlato()));
+        DecimalFormat form = new DecimalFormat("0.00");
+        txtprecio.setText("$ "+form.format(dataModal.getPrecioPlato()));
+        id.setText(dataModal.getDocumentID());
         cbAñadir.setChecked(dataModal.isAñadidoAlPedido());
         cbAñadir.setTag(position);
         cbAñadir.setOnClickListener(new View.OnClickListener() {
