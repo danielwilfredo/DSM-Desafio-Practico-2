@@ -8,5 +8,6 @@
 ## Enlace a Mockups
 https://www.figma.com/file/oimPCCFXLz2TTkVN5GpJFj/DSM-Practico2?node-id=0%3A1
 
-### Nombre Aplicación: Danielo's Restaurant
+## Nombre de la Aplicación:
+### Danielo's Restaurant
 
